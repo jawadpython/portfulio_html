@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jawad Khribech - Freelance IT Engineer spécialisé en Réseaux, Cybersécurité et Développement">
+    <title>test2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">JK</div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link" data-translate="nav.home">Accueil</a></li>
+                <li><a href="#about" class="nav-link" data-translate="nav.about">À propos</a></li>
+                <li><a href="#services" class="nav-link" data-translate="nav.services">Services</a></li>
+                <li><a href="#projects" class="nav-link" data-translate="nav.projects">Projets</a></li>
+                <li><a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-thumb">
+                            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            </svg>
+                            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+                <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                    <span class="lang-text" data-lang="fr">FR</span>
+                    <span class="lang-text" data-lang="en">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="line" data-translate="hero.greeting">test</span>
+                    <span class="line highlight">Jawad test</span>
+                    <span class="line" data-translate="hero.role">Freelance en Réseaux, Cybersécurité (Pentest)</span>
+                    <span class="line" data-translate="hero.role2">et Développement Web & Mobile</span>
+                </h1>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-indicator">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up" data-translate="about.title">À propos</h2>
+            <div class="about-content" data-animate="fade-up" data-delay="100">
+                <p class="about-text" data-translate="about.text1">
+                    Ingénieur IT freelance passionné par la sécurité des systèmes et le développement d'applications robustes. 
+                    Je combine expertise technique et approche pragmatique pour livrer des solutions sur mesure.
+                </p>
+                <p class="about-text" data-translate="about.text2">
+                    Spécialisé dans la sécurisation des infrastructures réseau, les tests de pénétration, 
+                    et le développement d'applications web et mobiles performantes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up" data-translate="services.title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-animate="fade-up" data-delay="0">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="2.5"/>
+                            <path d="M8 2v20M16 2v20M2 8h20M2 16h20"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-translate="services.network.title">Réseaux</h3>
+                    <p class="service-description" data-translate="services.network.description">
+                        Conception, configuration et optimisation d'infrastructures réseau sécurisées et performantes.
+                    </p>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-translate="services.security.title">Cybersécurité / Pentest</h3>
+                    <p class="service-description" data-translate="services.security.description">
+                        Tests de pénétration, audits de sécurité et renforcement des défenses de vos systèmes.
+                    </p>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="200">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-translate="services.web.title">Développement Web</h3>
+                    <p class="service-description" data-translate="services.web.description">
+                        Applications web modernes, performantes et sécurisées, du frontend au backend.
+                    </p>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2"/>
+                            <path d="M12 18h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-translate="services.mobile.title">Développement Mobile</h3>
+                    <p class="service-description" data-translate="services.mobile.description">
+                        Applications mobiles natives et cross-platform avec focus sur la sécurité et l'expérience utilisateur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up" data-translate="projects.title">Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-animate="fade-up" data-delay="0">
+                    <div class="project-overlay"></div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-translate="projects.item1.title">Infrastructure Sécurisée</h3>
+                        <p class="project-description" data-translate="projects.item1.description">
+                            Mise en place d'une architecture réseau complète avec segmentation, monitoring et protection avancée.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Réseaux</span>
+                            <span class="tag">Sécurité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-animate="fade-up" data-delay="100">
+                    <div class="project-overlay"></div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-translate="projects.item2.title">Audit de Sécurité</h3>
+                        <p class="project-description" data-translate="projects.item2.description">
+                            Test de pénétration complet d'une application web avec rapport détaillé et recommandations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Pentest</span>
+                            <span class="tag">Web</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-animate="fade-up" data-delay="200">
+                    <div class="project-overlay"></div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-translate="projects.item3.title">Application Web</h3>
+                        <p class="project-description" data-translate="projects.item3.description">
+                            Plateforme web sécurisée avec authentification robuste et architecture scalable.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-animate="fade-up" data-delay="300">
+                    <div class="project-overlay"></div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-translate="projects.item4.title">Application Mobile</h3>
+                        <p class="project-description" data-translate="projects.item4.description">
+                            Application mobile cross-platform avec chiffrement des données et API sécurisée.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Sécurité</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up" data-translate="contact.title">Contact</h2>
+            <div class="contact-content" data-animate="fade-up" data-delay="100">
+                <p class="contact-text" data-translate="contact.text">
+                    Intéressé par une collaboration ? Discutons de votre projet.
+                </p>
+                <div class="contact-links">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=khribech400@gmail.com" class="contact-link" target="_blank" rel="noopener">
+                        <span class="contact-link-icon">✉</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jawad-khribech/" class="contact-link" target="_blank" rel="noopener">
+                        <span class="contact-link-icon">in</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/212630097463" class="contact-link" target="_blank" rel="noopener">
+                        <span class="contact-link-icon">💬</span>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jawad Khribech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+</html>
