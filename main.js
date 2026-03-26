@@ -324,18 +324,17 @@
     class ThemeToggle {
         constructor() {
             this.toggleBtn = document.getElementById('themeToggle');
-            this.currentTheme = localStorage.getItem('theme') || 'dark';
+            this.currentTheme = localStorage.getItem('theme') || 'light';
             this.init();
         }
 
         init() {
-            // Apply theme - only set attribute if not 'dark' (dark is default)
-            if (this.currentTheme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-            } else {
-                // Ensure dark mode - remove attribute if present
+            // Apply theme - light is the default
+            if (this.currentTheme === 'dark') {
                 document.documentElement.removeAttribute('data-theme');
-                this.currentTheme = 'dark';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                this.currentTheme = 'light';
             }
             
             if (this.toggleBtn) {
